@@ -1,0 +1,73 @@
+#database-upgrades:
+#- version: 1
+#  create-tables:
+#  - table-name: t_user
+#    comment: 用户表
+#    columns:
+#    - {column-name: id, comment: 主键ID, length: 20, data-type: BIGINT}
+#    - {column-name: username, comment: 用户名, length: 100, data-type: VARCHAR}
+#    - {column-name: password, comment: 密码, length: 32, data-type: VARCHAR}
+#    - {column-name: sex, comment: 性别, length: 1, data-type: VARCHAR, default-value: 0}
+#    - {column-name: birth_date, comment: 出生日期, length: 20, data-type: DATE}
+#- version: 2
+#  add-columns:
+#  - table-name: t_user
+#    columns:
+#    - {column-name: address, comment: 地址, length: 255, data-type: VARCHAR}
+#    - {column-name: test_c1, comment: 测试字段, length: 255, data-type: VARCHAR}
+#- version: 3
+#  modify-columns:
+#  - table-name: t_user
+#    columns:
+#    - {column-name: sex, comment: 性别, length: 8, data-type: VARCHAR, default-value: 女}
+#- version: 4
+#  rename-columns:
+#  - table-name: t_user
+#    column-name: test_c1
+#    new-column: {column-name: test_c0, comment: 测试字段, length: 255, data-type: VARCHAR}
+#- version: 5
+#  create-indexes:
+#  - {index-name: idx_username, table-name: t_user, column-names: username}
+#- version: 6
+#  sqls:
+#  - insert into t_user(id, username, password, birth_date) values (1, 'superadmin', '000000', $date{2020-07-26})
+database-upgrades:
+  - version: 1
+    add-columns:
+      - table-name: sys_login_log
+        columns:
+          - { column-name: user_agent, comment: 用户代理, length: 255, data-type: VARCHAR }
+  - version: 2
+    create-tables:
+      - table-name: sys_security_setting
+        comment: 安全设置表
+        columns:
+          - { column-name: id, comment: 主键ID, length: 20, data-type: BIGINT }
+          - { column-name: name, comment: 名称, length: 100, data-type: VARCHAR, nullable: false }
+          - { column-name: code, comment: 编码, length: 100, data-type: VARCHAR, nullable: false }
+          - { column-name: value, comment: 值, length: 100, data-type: VARCHAR }
+          - { column-name: revision, comment: revision, length: 11, data-type: INT }
+          - { column-name: created_by, comment: 创建用户, length: 20, data-type: BIGINT }
+          - { column-name: created_time, comment: 创建时间,  data-type: DATETIME }
+          - { column-name: updated_by, comment: 修改用户, length: 20, data-type: BIGINT }
+          - { column-name: updated_time, comment: 修改时间, data-type: DATETIME }
+      - table-name: sys_login_rule
+        comment: 登录规则设置表
+        columns:
+          - { column-name: id, comment: 主键ID, length: 20, data-type: BIGINT }
+          - { column-name: name, comment: 名称, length: 100, data-type: VARCHAR, nullable: false }
+          - { column-name: type, comment: "规则类型：1-ip地址 2-mac地址", length: 2, data-type: INT, nullable: false }
+          - { column-name: content, comment: 规则内容, length: 255, data-type: VARCHAR, nullable: false }
+          - { column-name: mac, comment: mac地址, length: 20, data-type: VARCHAR }
+          - { column-name: begin_ip, comment: 起始ip地址, length: 20, data-type: VARCHAR }
+          - { column-name: end_ip, comment: 终止ip地址, length: 20, data-type: VARCHAR }
+          - { column-name: begin_valid_time, comment: 开始生效时间, data-type: DATETIME }
+          - { column-name: end_valid_time, comment: 结束生效时间, data-type: DATETIME }
+          - { column-name: revision, comment: revision, length: 11, data-type: INT }
+          - { column-name: created_by, comment: 创建用户, length: 20, data-type: BIGINT }
+          - { column-name: created_time, comment: 创建时间,  data-type: DATETIME }
+          - { column-name: updated_by, comment: 修改用户, length: 20, data-type: BIGINT }
+          - { column-name: updated_time, comment: 修改时间, data-type: DATETIME }
+    create-indexes:
+      - { index-name: uni_sese_code, table-name: sys_security_setting, column-names: code, index-type: UNIQUE }
+      - { index-name: uni_loru_name, table-name: sys_login_rule, column-names: name, index-type: UNIQUE }

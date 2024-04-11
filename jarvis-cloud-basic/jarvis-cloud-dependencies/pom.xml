@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jarvis.platform</groupId>
+        <artifactId>jarvis-cloud-basic</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>jarvis-cloud-dependencies</artifactId>
+    <packaging>pom</packaging>
+
+
+    <properties>
+        <jarvis.version>1.0.0-SNAPSHOT</jarvis.version>
+        <easyexcel.version>2.2.10</easyexcel.version>
+        <tika.version>2.3.0</tika.version>
+        <commons-code.version>1.15</commons-code.version>
+        <okhttp3.version>4.8.1</okhttp3.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.jarvis.platform</groupId>
+                <artifactId>jarvis-cloud-nacos-client</artifactId>
+                <version>${jarvis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jarvis.platform</groupId>
+                <artifactId>jarvis-cloud-logback</artifactId>
+                <version>${jarvis.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

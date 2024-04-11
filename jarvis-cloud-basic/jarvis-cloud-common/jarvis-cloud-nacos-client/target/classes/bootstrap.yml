@@ -1,0 +1,20 @@
+# 注册中心和配置中心
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}
+      config:
+        server-addr: ${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}
+        prefix: application
+        file-extension: yaml
+
+
+    util:
+      enabled: false
+    inetutils:
+      # 忽略虚拟机网卡
+      ignored-interfaces: ${IGNORED_INTERFACES:VMware.*,vEthernet.*}
+      use-only-site-local-interfaces: ${ONLY_SITE_LOCAL_INTERFACES:false}
+      # 优先使用IP，如：192.168.0.100
+      preferred-networks: ${PREFERRED_NETWORKS:}

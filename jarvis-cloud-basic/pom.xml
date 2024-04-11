@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.jarvis.platform</groupId>
+        <artifactId>jarvis-cloud-platform</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>jarvis-cloud-basic</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>jarvis-cloud-parent</module>
+        <module>jarvis-cloud-dependencies</module>
+        <module>jarvis-cloud-common</module>
+        <module>jarvis-cloud-parent-war</module>
+    </modules>
+
+    <properties>
+        <!-- 基础环境变量 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <!-- 组织信息 -->
+    <organization>
+        <name>jarvis</name>
+        <url>http://www.jarvis.com.cn/</url>
+    </organization>
+
+    <!-- 发布仓库 -->
+    <!-- 中心仓库 -->
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-releases</name>
+            <url>http://app.deehero.com:60008/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>maven-snapshots</name>
+            <url>http://app.deehero.com:60008/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- 仓库地址 -->
+    <repositories>
+        <repository>
+            <id>maven-public</id>
+            <url>http://app.deehero.com:60008/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven-public</id>
+            <url>http://app.deehero.com:60008/repository/maven-public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>

@@ -1,0 +1,12 @@
+spring:
+  security:
+    validate-code:
+      enabled: false
+    bad-creadentials:
+      enabled: false
+      timeout: 30
+
+# 生产环境不开启swagger文档
+springfox:
+  documentation:
+    enabled: false

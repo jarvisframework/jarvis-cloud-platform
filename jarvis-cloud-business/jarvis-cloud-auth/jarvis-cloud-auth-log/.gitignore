@@ -1,0 +1,12 @@
+/.metadata/
+/.recommenders/
+/.settings/*
+
+/logs/*
+/target/*
+/.classpath
+/.project
+
+.idea/libraries
+.idea
+*.iml
