@@ -1,0 +1,27 @@
+spring:
+  mvc:
+    format:
+      date: yyyy-MM-dd
+      date-time: yyyy-MM-dd HH:mm:ss
+      time: HH:mm:ss
+  security:
+    permit-access-id: qRTETFKMKzcz3bYHCZcpmqa0Ggm3b80h
+  redis:
+    host: ${REDIS_HOST:jarvis-redis}
+    port: ${REDIS_PORT:60005}
+    password: 123456
+    database: 1
+  cloud:
+    stream:
+      default-binder: rocketmq
+      rocketmq:
+        binder:
+          name-server: ${MQ_HOST:jarvis-mq}:${MQ_PORT:9876}
+
+jarvis:
+  # 存储配置，type为local为本地磁盘、minio为Minio
+  fs:
+    type: ${FS_TYPE:local}
+    endpoint: http://${FS_HOST:jarvis-fs}:${FS_PORT:9200}
+    access-key: ${FS_USERNAME:minio}
+    secret-key: ${FS_PASSWORD:"00000000"}
