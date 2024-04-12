@@ -11,6 +11,7 @@
     <modules>
         <module>jarvis-cloud-auth</module>
         <module>jarvis-cloud-search</module>
+        <module>jarvis-cloud-gateway</module>
     </modules>
 
     <properties>

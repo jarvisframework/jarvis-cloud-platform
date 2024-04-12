@@ -54,6 +54,7 @@
 
 ### 6. 项目模块
 
+```lua
 jarvis-cloud-platform -- 父项目，公共依赖
 │ ├─jarvis-business -- 业务模块一级工程
 │ │ ├─user-center -- 用户中心[7000]
@@ -93,7 +94,7 @@ jarvis-cloud-platform -- 父项目，公共依赖
 │ │ ├─rocketmq-demo -- rocketmq和mq事务demo
 │ │ ├─sso-demo -- 单点登录demo
 │ │ ├─websocket-demo -- websocket demo
-
+```
 ### 7. 其他资源
 
 ### 8. 环境依赖
