@@ -95,9 +95,17 @@ jarvis-cloud-platform -- 父项目，公共依赖
 │ │ ├─sso-demo -- 单点登录demo
 │ │ ├─websocket-demo -- websocket demo
 ```
-### 7. 其他资源
 
-### 8. 环境依赖
+## 7. 分支说明
+| 分支名    | JDK | Spring Boot | Spring Cloud | Spring Security             |
+|--------|-----|-------------|--------------|-----------------------------|
+| master | 17  | 3.x         | 2022.x       | Spring Authorization Server |
+| 2.x    | 1.8 | 2.5.x       | 2020.x       | Spring Security OAuth       |
+| 1.x    | 1.8 | 2.3.x       | 2.2.x        | Spring Security OAuth       |
+
+### 8. 其他资源
+
+### 9. 环境依赖
 
 - JDK 1.8 以上
 
