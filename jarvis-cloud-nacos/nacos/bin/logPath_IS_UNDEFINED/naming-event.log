@@ -1,0 +1,22 @@
+2024-04-12 11:32:13,553 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:10020@DEFAULT@jarvis-cloud-auth-server, region: unknown, msg: client last beat: 1712892716214
+
+2024-04-12 11:32:14,451 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:11052@DEFAULT@jarvis-cloud-search-server, region: unknown, msg: client last beat: 1712892716884
+
+2024-04-12 13:30:35,662 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:11052@DEFAULT@jarvis-cloud-search-server, region: unknown, msg: client last beat: 1712899818075
+
+2024-04-12 13:30:35,963 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:10020@DEFAULT@jarvis-cloud-auth-server, region: unknown, msg: client last beat: 1712899816878
+
+2024-04-12 13:35:34,560 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:11052@DEFAULT@jarvis-cloud-search-server, region: unknown, msg: client last beat: 1712900118776
+
+2024-04-12 13:37:59,786 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:11052@DEFAULT@jarvis-cloud-search-server, region: unknown, msg: client last beat: 1712900264141
+
+2024-04-12 13:38:24,831 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:11052@DEFAULT@jarvis-cloud-search-server, region: unknown, msg: client last beat: 1712900288171
+
+2024-04-12 13:38:26,863 INFO service: DEFAULT_GROUP@@jarvis-cloud-search-server {POS} {IP-ENABLED} valid: 172.20.10.4:11052@DEFAULT, region: unknown, msg: client beat ok
+
+2024-04-12 13:39:49,975 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:11052@DEFAULT@jarvis-cloud-search-server, region: unknown, msg: client last beat: 1712900374356
+
+2024-04-12 14:59:59,301 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:10020@DEFAULT@jarvis-cloud-auth-server, region: unknown, msg: client last beat: 1712905182835
+
+2024-04-12 15:00:12,552 INFO {POS} {IP-DISABLED} valid: 172.20.10.4:11052@DEFAULT@jarvis-cloud-search-server, region: unknown, msg: client last beat: 1712905196315
+
