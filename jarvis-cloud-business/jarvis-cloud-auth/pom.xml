@@ -9,6 +9,7 @@
     </parent>
     <artifactId>jarvis-cloud-auth</artifactId>
     <packaging>pom</packaging>
+
     <modules>
         <module>jarvis-cloud-auth-server</module>
         <module>jarvis-cloud-auth-client</module>

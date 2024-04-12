@@ -1,5 +1,5 @@
 server:
-  port: 10020
+  port: 11052
   error:
     include-message: always
   undertow:
@@ -17,12 +17,6 @@ spring:
     active: dev,mysql-dev
     include: upgrade,db
 
-  servlet:
-    multipart:
-      max-file-size: 1MB
-      max-request-size: 1MB
-      enabled: true
-
   mvc:
     format:
       date: yyyy-MM-dd
@@ -35,25 +29,7 @@ spring:
     bad-creadentials:
       enabled: false
       count: 5
-      timeout: 30 #单位为分钟
-    ignore-urls:
-      - /security-setting/validate-code
-    authority-urls:
-      - url: /system/**
-        authorities: superadmin,system
-      - url: /resource/**
-        authorities: superadmin,resource,deptmanager
-      - url: /organization/**
-        authorities: superadmin,deptmanager,manager,systemmanager,unitadmin
-      - url: /user/**
-        authorities: superadmin,deptmanager,manager,systemmanager,unitadmin
-      - url: /role/**
-        authorities: superadmin,role
-    oauth2:
-      server:
-        access-token-timeout: 360 #单位为分钟
-        concurrent-access: true
-        concurrent-shared: false
+      timeout: 30
 
 #  redis:
 #    host: 127.0.0.1
@@ -72,4 +48,3 @@ mybatis:
     jdbc-type-for-null: 'NULL'
     use-actual-param-name: true
     map-underscore-to-camel-case: true
-

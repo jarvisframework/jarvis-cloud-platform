@@ -8,21 +8,22 @@
     </parent>
 
     <artifactId>jarvis-cloud-auth-log</artifactId>
-    <packaging>jar</packaging>
-
-    <name>jarvis-auth-log</name>
-    <url>http://maven.apache.org</url>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>com.jarvis.platform</groupId>
+            <artifactId>jarvis-cloud-auth-core</artifactId>
+            <version>${jarvis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jarvis.platform</groupId>
+            <artifactId>jarvis-cloud-auth-client</artifactId>
+            <version>${jarvis.version}</version>
+        </dependency>
+        <!-- bizlog -->
+        <dependency>
+            <groupId>com.jarvis.framework</groupId>
+            <artifactId>jarvis-bizlog-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 </project>

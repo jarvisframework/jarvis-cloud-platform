@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>jarvis-cloud-auth</module>
+        <module>jarvis-cloud-search</module>
     </modules>
 
     <properties>
