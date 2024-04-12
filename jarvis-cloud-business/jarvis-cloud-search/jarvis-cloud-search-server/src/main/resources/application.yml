@@ -30,6 +30,8 @@ spring:
       enabled: false
       count: 5
       timeout: 30
+    ignore-urls:
+      - /test
 
 #  redis:
 #    host: 127.0.0.1
