@@ -1,0 +1,15 @@
+/.metadata/
+/.recommenders/
+/.settings/*
+
+/logs/*
+/target/*
+/.classpath
+/.project
+/.factorypath
+
+.idea/libraries
+.idea
+*.iml
+
+/src/main/resources/key.license
