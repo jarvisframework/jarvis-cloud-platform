@@ -9,3 +9,5 @@
         application-dev.yml   # 是jarvis-xxx-server服务开发环境的全局配置
         application-prod.yml  # 是jarvis-xxx-server服务正式环境的全局配置
         application-test.yml  # 是jarvis-xxx-server服务测试环境的全局配置
+
+    nacos_config_export_20240412190744.zip # 是以上所有配置的Nacos导出
