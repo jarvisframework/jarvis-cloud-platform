@@ -3,26 +3,54 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jarvis.platform</groupId>
-        <artifactId>jarvis-cloud-business</artifactId>
+        <artifactId>jarvis-cloud-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../jarvis-cloud-basic/jarvis-cloud-parent</relativePath>
     </parent>
 
     <artifactId>jarvis-cloud-gateway</artifactId>
-    <packaging>jar</packaging>
-
-    <name>jarvis-cloud-gateway</name>
-    <url>http://maven.apache.org</url>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jarvis.framework</groupId>
+            <artifactId>jarvis-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jarvis.framework</groupId>
+            <artifactId>jarvis-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jarvis.platform</groupId>
+            <artifactId>jarvis-cloud-util</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+        </dependency>
+        <!--nacos client -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+        </dependency>
+        <!--Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

@@ -1,0 +1,52 @@
+server:
+  port: 10099
+
+spring:
+  application:
+    name: jarvis-gateway
+  profiles:
+    active: ${PROFILES_ACTIVE:dev,mysql-dev}
+  codec:
+    max-in-memory-size: -1
+
+  cloud:
+    gateway:
+      httpclient:
+        response-timeout: 300s
+        connect-timeout: 1000
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+          route-id-prefix: DiscoveryClient_
+      default-filters:
+        - RemoveRequestHeader=X-Request-Access-Id
+      routes:
+        - id: GatewayConfig_JIARVIS-AUTH-SERVER
+          order: -1000
+          uri: lb://jarvis-auth-server
+          predicates:
+            - Path=/jarvis-auth-server/**
+          filters:
+            - RewritePath=/jarvis-auth-server/?(?<remaining>.*),/${remaining]
+            - PasswordDecoder
+
+jarvis:
+  tamper:
+    enabled: true # 请求参数验证开关
+    ignore-urls: # 设置不验证的URL
+      - /*/v3/api-docs
+      - /*/oauth2/token
+      - /*/ws/**
+      - /*/poserver.zz
+      - /**/page-office**
+      - /*/transfer-receive-king/**
+
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'

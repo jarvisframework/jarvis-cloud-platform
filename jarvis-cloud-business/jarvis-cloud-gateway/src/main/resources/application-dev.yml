@@ -1,0 +1,3 @@
+jarvis:
+  tamper:
+    enabled: true # 请求参数验证开关

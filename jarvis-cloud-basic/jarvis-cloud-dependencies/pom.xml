@@ -31,6 +31,11 @@
                 <artifactId>jarvis-cloud-logback</artifactId>
                 <version>${jarvis.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.jarvis.platform</groupId>
+                <artifactId>jarvis-cloud-util</artifactId>
+                <version>${jarvis.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
