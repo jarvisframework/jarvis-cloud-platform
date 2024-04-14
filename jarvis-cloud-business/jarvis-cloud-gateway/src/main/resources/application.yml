@@ -19,17 +19,17 @@ spring:
           enabled: true
           lower-case-service-id: true
           route-id-prefix: DiscoveryClient_
-      default-filters:
-        - RemoveRequestHeader=X-Request-Access-Id
-      routes:
-        - id: GatewayConfig_JIARVIS-AUTH-SERVER
-          order: -1000
-          uri: lb://jarvis-auth-server
-          predicates:
-            - Path=/jarvis-auth-server/**
-          filters:
-            - RewritePath=/jarvis-auth-server/?(?<remaining>.*),/${remaining]
-            - PasswordDecoder
+      #default-filters:
+      #  - RemoveRequestHeader=X-Request-Access-Id
+      #routes:
+      #  - id: GatewayConfig_JIARVIS-AUTH-SERVER
+      #    order: -1000
+      #    uri: lb://jarvis-auth-server
+      #    predicates:
+      #      - Path=/jarvis-auth-server/**
+      #    filters:
+      #      - RewritePath=/jarvis-auth-server/?(?<remaining>.*),/${remaining]
+      #      - PasswordDecoder
 
 jarvis:
   tamper:

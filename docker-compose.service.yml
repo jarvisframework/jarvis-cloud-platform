@@ -1,0 +1,40 @@
+version: '3'
+services:
+  jarvis-cloud-gateway:
+    container_name: jarvis-cloud-gateway
+    build: # 服务的 Docker 构建文件位置
+      context: ./jarvis-cloud-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8101:8101"
+    networks:
+      - jarvis-network
+
+  jarvis-cloud-auth-server:
+    container_name: jarvis-cloud-auth-server
+    build:
+      context: ./jarvis-cloud-auth-server
+      dockerfile: Dockerfile
+    ports:
+      - "8102:8102"
+    networks:
+      - jarvis-network
+    depends_on: # 本服务依赖的服务，控制启动先后顺序
+      - jarvis-cloud-gateway
+
+  jarvis-cloud-search-server:
+    container_name: jarvis-cloud-search-server
+    build:
+      context: ./jarvis-cloud-search-server
+      dockerfile: Dockerfile
+    ports:
+      - "8103:8103"
+    networks:
+      - jarvis-network
+    depends_on:
+      - jarvis-cloud-auth-server
+      - jarvis-cloud-gateway
+
+# 网络，不定义的话就是默认网络
+networks:
+  jarvis-network:
