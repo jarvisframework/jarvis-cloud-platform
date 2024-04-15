@@ -17,6 +17,7 @@
         <module>jarvis-cloud-dependencies</module>
         <module>jarvis-cloud-common</module>
         <module>jarvis-cloud-parent-war</module>
+        <module>jarvis-cloud-starters</module>
     </modules>
 
     <properties>
