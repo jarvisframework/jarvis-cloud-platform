@@ -3,17 +3,18 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.jarvis.platform</groupId>
-        <artifactId>jarvis-cloud-parent</artifactId>
+        <artifactId>jarvis-cloud-search</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath>../jarvis-cloud-parent</relativePath>
     </parent>
 
-    <artifactId>jarvis-cloud-starters</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>jarvis-cloud-search-core</artifactId>
 
-    <modules>
-        <module>jarvis-license-spring-boot-starter</module>
-        <module>jarvis-dubbo-spring-boot-starter</module>
-    </modules>
-
+    <dependencies>
+        <!--Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>

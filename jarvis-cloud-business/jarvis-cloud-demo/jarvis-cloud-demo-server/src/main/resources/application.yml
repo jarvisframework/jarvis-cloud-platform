@@ -1,5 +1,5 @@
 server:
-  port: 11052
+  port: 11060
   error:
     include-message: always
   undertow:
@@ -52,8 +52,6 @@ mybatis:
     map-underscore-to-camel-case: true
 
 dubbo:
-  scan:
-    base-packages: com.jarvis.platform.search.modular.test.service.impl
   protocols:
     dubbo:
       name: dubbo
