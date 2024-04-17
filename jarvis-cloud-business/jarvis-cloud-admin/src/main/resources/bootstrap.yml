@@ -1,7 +1,5 @@
 server:
   port: 10079
-  servlet:
-    context-path: /admin
 spring:
   application:
     name: jarvis-admin
@@ -9,9 +7,25 @@ spring:
     user:
       name: admin
       password: 123456
-  #cloud:
-  #  nacos:
-  #    discovery:
-  #      metadata:
-  #        user.name: ${spring.security.user.name}
-  #        user.password: ${spring.security.user.password}
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}
+        metadata:
+          user.name: ${spring.security.user.name}
+          user.password: ${spring.security.user.password}
+  #mail:
+  #  host: smtp.qq.com
+  #  username: xxxxx@qq.com
+  #  password: 授权码
+  #boot:
+  #  admin:
+  #    notify:
+  #      mail:
+  #        to: 收件人邮箱
+  #        from: 发件人邮箱
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
