@@ -14,6 +14,12 @@ spring:
         metadata:
           user.name: ${spring.security.user.name}
           user.password: ${spring.security.user.password}
+  boot:
+    admin:
+      discovery:
+        ignored-services:
+          - 'providers:*' # 过滤dubbo服务
+
   #mail:
   #  host: smtp.qq.com
   #  username: xxxxx@qq.com
@@ -24,8 +30,11 @@ spring:
   #      mail:
   #        to: 收件人邮箱
   #        from: 发件人邮箱
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
+management:
+  endpoint:
+    health:
+      show-details: always #开放所有的健康信息明细
+  endpoints:
+    web:
+      exposure:
+        include: "*" #开启查阅的内容项，使用*表示查阅全部。记得带引号，默认带health的内容项
