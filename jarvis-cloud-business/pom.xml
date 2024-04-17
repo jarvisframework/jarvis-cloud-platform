@@ -13,7 +13,7 @@
         <module>jarvis-cloud-search</module>
         <module>jarvis-cloud-gateway</module>
         <module>jarvis-cloud-demo</module>
-        <module>jarvis-cloud-demo/jarvis-cloud-demo-server</module>
+        <module>jarvis-cloud-admin</module>
     </modules>
 
     <properties>

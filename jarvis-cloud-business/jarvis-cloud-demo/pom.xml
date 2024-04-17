@@ -11,6 +11,10 @@
     <artifactId>jarvis-cloud-demo</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>jarvis-cloud-demo-server</module>
+    </modules>
+
     <!-- 仓库地址 -->
     <repositories>
         <repository>
