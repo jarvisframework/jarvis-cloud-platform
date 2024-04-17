@@ -1,0 +1,9 @@
+dubbo:
+  protocols:
+    dubbo:
+      name: dubbo
+      port: -1
+  registry:
+    address: nacos://${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}
+  cloud:
+    subscribed-services: /

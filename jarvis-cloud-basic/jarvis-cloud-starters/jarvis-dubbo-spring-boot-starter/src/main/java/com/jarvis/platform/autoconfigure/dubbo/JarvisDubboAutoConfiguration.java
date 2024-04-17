@@ -1,6 +1,9 @@
 package com.jarvis.platform.autoconfigure.dubbo;
 
+import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
+import org.apache.dubbo.spring.boot.autoconfigure.DubboConfigurationProperties;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -9,6 +12,8 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnWebApplication
+@DubboComponentScan(value = "com.jarvis.platform")
+@EnableConfigurationProperties(DubboConfigurationProperties.class)
 public class JarvisDubboAutoConfiguration {
 
 }
