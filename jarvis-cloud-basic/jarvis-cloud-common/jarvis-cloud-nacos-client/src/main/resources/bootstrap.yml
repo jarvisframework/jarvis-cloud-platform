@@ -2,6 +2,8 @@
 spring:
   cloud:
     nacos:
+      username: nacos
+      password: nacos
       discovery:
         server-addr: ${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}
       config:

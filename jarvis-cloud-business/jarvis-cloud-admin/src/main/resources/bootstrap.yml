@@ -9,6 +9,8 @@ spring:
       password: 123456
   cloud:
     nacos:
+      username: nacos
+      password: nacos
       discovery:
         server-addr: ${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}
         metadata:
@@ -19,6 +21,7 @@ spring:
       discovery:
         ignored-services:
           - 'providers:*' # 过滤dubbo服务
+          - 'consumers:*'
 
   #mail:
   #  host: smtp.qq.com

@@ -4,6 +4,9 @@ dubbo:
       name: dubbo
       port: -1
   registry:
-    address: nacos://${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}
+    address: nacos://${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}?username=nacos&password=nacos
+  metadata-report:
+    address: nacos://${NACOS_SERVER:jarvis-nacos}:${NACOS_PORT:8848}?username=nacos&password=nacos
   cloud:
     subscribed-services: /
+
