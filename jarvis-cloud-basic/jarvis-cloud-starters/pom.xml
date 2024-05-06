@@ -15,6 +15,7 @@
         <module>jarvis-license-spring-boot-starter</module>
         <module>jarvis-dubbo-spring-boot-starter</module>
         <module>jarvis-seata-spring-boot-starter</module>
+        <module>jarvis-redisson-spring-boot-starter</module>
     </modules>
 
 </project>
