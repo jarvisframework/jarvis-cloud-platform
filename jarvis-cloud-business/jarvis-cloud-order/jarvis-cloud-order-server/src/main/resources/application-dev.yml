@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: "@artifactId@${HOST_OWNER:}"
+  security:
+    validate-code:
+      enabled: false
+    bad-creadentials:
+      enabled: false
+      timeout: 30

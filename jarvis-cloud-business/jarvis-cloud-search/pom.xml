@@ -20,5 +20,6 @@
         <module>jarvis-cloud-search-server</module>
         <module>jarvis-cloud-search-sdk</module>
         <module>jarvis-cloud-search-core</module>
+        <module>jarvis-cloud-search-client</module>
     </modules>
 </project>

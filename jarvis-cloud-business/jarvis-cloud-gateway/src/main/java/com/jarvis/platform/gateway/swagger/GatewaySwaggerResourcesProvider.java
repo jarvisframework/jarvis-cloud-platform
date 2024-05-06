@@ -26,7 +26,6 @@ public class GatewaySwaggerResourcesProvider implements SwaggerResourcesProvider
     }
 
     /**
-     *
      * @see java.util.function.Supplier#get()
      */
     @Override

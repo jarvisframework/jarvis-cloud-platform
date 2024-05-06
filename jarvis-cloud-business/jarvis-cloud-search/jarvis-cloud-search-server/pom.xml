@@ -35,6 +35,11 @@
             <artifactId>jarvis-baseweb</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.jarvis.platform</groupId>
+            <artifactId>jarvis-seata-spring-boot-starter</artifactId>
+            <version>${jarvis.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.jarvis.framework</groupId>
             <artifactId>jarvis-database-upgrade-spring-boot-starter</artifactId>
         </dependency>

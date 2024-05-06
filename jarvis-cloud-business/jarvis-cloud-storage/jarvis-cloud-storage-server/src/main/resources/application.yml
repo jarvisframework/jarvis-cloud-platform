@@ -1,0 +1,69 @@
+server:
+  port: 11051
+  error:
+    include-message: always
+  undertow:
+    max-http-post-size: 0
+    #    threads:
+    #      io: 4
+    #      worker: 32
+    buffer-size: 1024
+    direct-buffers: true
+
+spring:
+  application:
+    name: "@artifactId@"
+  profiles:
+    active: dev,mysql-dev
+    include: upgrade,db,dubbo
+
+  mvc:
+    format:
+      date: yyyy-MM-dd
+      date-time: yyyy-MM-dd HH:mm:ss
+      time: HH:mm:ss
+
+  security:
+    validate-code:
+      enabled: false
+    bad-creadentials:
+      enabled: false
+      count: 5
+      timeout: 30
+    ignore-urls:
+      - /test
+      - /actuator/**
+
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    lettuce:
+#      pool:
+#        max-active: 16
+
+snowflake:
+  worker-id: 1
+
+mybatis:
+  mapper-locations:
+    - classpath*:/mapper/*Mapper.xml
+  configuration:
+    jdbc-type-for-null: 'NULL'
+    use-actual-param-name: true
+    map-underscore-to-camel-case: true
+
+# ========================seata===================
+seata:
+  registry:
+    type: nacos
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      group: DEFAULT_GROUP
+      application: seata-server
+  tx-service-group: default_tx_group # 事务组，由它获得TC服务的集群名称
+  service:
+    vgroup-mapping:
+      default_tx_group: default # 事务组与TC服务集群的映射关系
+  data-source-proxy-mode: AT

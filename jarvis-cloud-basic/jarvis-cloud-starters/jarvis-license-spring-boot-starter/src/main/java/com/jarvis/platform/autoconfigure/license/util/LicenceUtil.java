@@ -72,7 +72,7 @@ public class LicenceUtil {
                 BufferedReader bufferedReader = new BufferedReader(read);
                 String lineTxt = null;
 
-                while((lineTxt = bufferedReader.readLine()) != null) {
+                while ((lineTxt = bufferedReader.readLine()) != null) {
                     contentBuffer.append(lineTxt);
                 }
 
@@ -164,10 +164,10 @@ public class LicenceUtil {
             doc.getDocumentElement().normalize();
             NodeList nodeList = doc.getDocumentElement().getChildNodes();
 
-            for(int idx = 0; idx < nodeList.getLength(); ++idx) {
+            for (int idx = 0; idx < nodeList.getLength(); ++idx) {
                 Node node = nodeList.item(idx);
                 if (node.getNodeType() == 1) {
-                    Element element = (Element)node;
+                    Element element = (Element) node;
                     data.put(element.getNodeName(), element.getTextContent());
                 }
             }
@@ -239,7 +239,7 @@ public class LicenceUtil {
         Collections.sort(keys);
         String prestr = "";
 
-        for(int i = 0; i < keys.size(); ++i) {
+        for (int i = 0; i < keys.size(); ++i) {
             String key = keys.get(i);
             String value = map.get(key);
             if (i == keys.size() - 1) {
@@ -267,7 +267,7 @@ public class LicenceUtil {
         char[] chs = new char[len * 2];
         int i = 0;
 
-        for(int k = 0; i < len; ++i) {
+        for (int k = 0; i < len; ++i) {
             byte b3 = b2[i];
             chs[k++] = ch[b3 >>> 4 & 15];
             chs[k++] = ch[b3 & 15];

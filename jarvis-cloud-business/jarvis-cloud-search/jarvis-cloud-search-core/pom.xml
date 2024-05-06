@@ -10,6 +10,14 @@
     <artifactId>jarvis-cloud-search-core</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>com.jarvis.framework</groupId>
+            <artifactId>jarvis-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jarvis.framework</groupId>
+            <artifactId>jarvis-javax-persistence</artifactId>
+        </dependency>
         <!--Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>

@@ -22,6 +22,7 @@ spring:
         ignored-services:
           - 'providers:*' # 过滤dubbo服务
           - 'consumers:*'
+          - 'seata-server'
 
   #mail:
   #  host: smtp.qq.com

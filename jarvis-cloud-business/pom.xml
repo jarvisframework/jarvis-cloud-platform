@@ -9,11 +9,13 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>jarvis-cloud-gateway</module>
         <module>jarvis-cloud-auth</module>
         <module>jarvis-cloud-search</module>
-        <module>jarvis-cloud-gateway</module>
         <module>jarvis-cloud-demo</module>
         <module>jarvis-cloud-admin</module>
+        <module>jarvis-cloud-order</module>
+        <module>jarvis-cloud-storage</module>
     </modules>
 
     <properties>
