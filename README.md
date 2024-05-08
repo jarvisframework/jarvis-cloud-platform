@@ -105,7 +105,7 @@ jarvis-cloud-platform -- 父项目，公共依赖
 | 1.x    | 1.8 | 2.3.x       | 2.2.x        | Spring Security OAuth       |
 
 ### 8. 其他资源
-
+https://www.mscodecloud.com/
 ### 9. 环境依赖
 
 - JDK 1.8 以上

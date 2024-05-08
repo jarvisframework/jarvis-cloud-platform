@@ -8,21 +8,44 @@
     </parent>
 
     <artifactId>jarvis-redisson-spring-boot-starter</artifactId>
-    <packaging>jar</packaging>
-
-    <name>jarvis-redisson-spring-boot-starter</name>
-    <url>http://maven.apache.org</url>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
+            <groupId>com.jarvis.framework</groupId>
+            <artifactId>jarvis-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- jarvis framework -->
+        <dependency>
+            <groupId>com.jarvis.framework</groupId>
+            <artifactId>jarvis-core</artifactId>
+        </dependency>
+        <!--redisson-->
+        <!--<dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.15.5</version>
+        </dependency>-->
+        <!--redisson-->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.15.6</version>
+        </dependency>
+        <!--添加aop需要添加spring cloud依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!--Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

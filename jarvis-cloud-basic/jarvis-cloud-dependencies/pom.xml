@@ -19,6 +19,7 @@
         <commons-code.version>1.15</commons-code.version>
         <okhttp3.version>4.8.1</okhttp3.version>
         <seata.version>1.7.0</seata.version>
+        <lock4j-redisson.version>2.2.5</lock4j-redisson.version>
     </properties>
 
     <dependencyManagement>
@@ -53,6 +54,13 @@
                 <groupId>io.seata</groupId>
                 <artifactId>seata-all</artifactId>
                 <version>${seata.version}</version>
+            </dependency>
+
+            <!-- redisson 分布式锁-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>lock4j-redisson-spring-boot-starter</artifactId>
+                <version>${lock4j-redisson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
